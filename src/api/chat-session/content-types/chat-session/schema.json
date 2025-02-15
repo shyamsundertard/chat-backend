@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chat_sessions",
+  "info": {
+    "singularName": "chat-session",
+    "pluralName": "chat-sessions",
+    "displayName": "ChatSession",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sessionId": {
+      "type": "uid",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 20,
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "chat_sessions"
+    },
+    "startedAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "messages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::message.message",
+      "mappedBy": "chatSession"
+    }
+  }
+}

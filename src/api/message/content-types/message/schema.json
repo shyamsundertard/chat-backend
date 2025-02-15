@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "singularName": "message",
+    "pluralName": "messages",
+    "displayName": "Message",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "messageId": {
+      "type": "uid",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true,
+      "maxLength": 1000,
+      "minLength": 1
+    },
+    "sender": {
+      "type": "enumeration",
+      "enum": [
+        "User",
+        "System"
+      ]
+    },
+    "messagedAt": {
+      "type": "datetime"
+    },
+    "chatSession": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::chat-session.chat-session",
+      "inversedBy": "messages"
+    }
+  }
+}
