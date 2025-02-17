@@ -11,19 +11,29 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@strapi/admin": "^5.10.2",
+    "@strapi/content-manager": "^5.10.2",
     "@strapi/plugin-cloud": "5.10.2",
     "@strapi/plugin-documentation": "^5.10.2",
-    "@strapi/plugin-users-permissions": "5.10.2",
+    "@strapi/plugin-users-permissions": "^5.10.2",
     "@strapi/provider-email-nodemailer": "^5.10.2",
-    "@strapi/strapi": "5.10.2",
+    "@strapi/strapi": "^5.10.2",
+    "@strapi/types": "^5.10.2",
+    "@types/socket.io": "^3.0.1",
+    "esbuild": "^0.25.0",
+    "esbuild-loader": "^4.3.0",
+    "koa": "^2.15.4",
     "pg": "8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "styled-components": "^6.0.0"
+    "socket.io": "^4.8.1",
+    "styled-components": "^6.0.0",
+    "undici": "^7.3.0",
+    "vite": "^6.1.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.17.19",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "typescript": "^5"

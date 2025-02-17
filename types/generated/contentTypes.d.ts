@@ -392,8 +392,6 @@ export interface ApiChatSessionChatSession extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     messages: Schema.Attribute.Relation<'oneToMany', 'api::message.message'>;
     publishedAt: Schema.Attribute.DateTime;
-    sessionId: Schema.Attribute.UID & Schema.Attribute.Required;
-    startedAt: Schema.Attribute.DateTime & Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
@@ -441,8 +439,6 @@ export interface ApiMessageMessage extends Struct.CollectionTypeSchema {
       'api::message.message'
     > &
       Schema.Attribute.Private;
-    messagedAt: Schema.Attribute.DateTime;
-    messageId: Schema.Attribute.UID & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     sender: Schema.Attribute.Enumeration<['User', 'System']>;
     updatedAt: Schema.Attribute.DateTime;
@@ -906,7 +902,6 @@ export interface PluginUsersPermissionsUser
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;

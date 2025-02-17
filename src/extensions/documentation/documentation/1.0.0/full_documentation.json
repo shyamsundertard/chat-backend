@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-02-15T08:11:44.287Z"
+    "x-generation-date": "2025-02-17T22:04:21.960Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -2510,15 +2510,10 @@
         "properties": {
           "data": {
             "required": [
-              "sessionId",
-              "title",
-              "startedAt"
+              "title"
             ],
             "type": "object",
             "properties": {
-              "sessionId": {
-                "type": "string"
-              },
               "title": {
                 "type": "string"
               },
@@ -2532,10 +2527,6 @@
                   }
                 ],
                 "example": "string or id"
-              },
-              "startedAt": {
-                "type": "string",
-                "format": "date-time"
               },
               "messages": {
                 "type": "array",
@@ -2610,18 +2601,13 @@
       "ChatSession": {
         "type": "object",
         "required": [
-          "sessionId",
-          "title",
-          "startedAt"
+          "title"
         ],
         "properties": {
           "id": {
             "type": "number"
           },
           "documentId": {
-            "type": "string"
-          },
-          "sessionId": {
             "type": "string"
           },
           "title": {
@@ -3085,9 +3071,6 @@
                     "documentId": {
                       "type": "string"
                     },
-                    "sessionId": {
-                      "type": "string"
-                    },
                     "title": {
                       "type": "string"
                     },
@@ -3102,10 +3085,6 @@
                         }
                       }
                     },
-                    "startedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
                     "messages": {
                       "type": "array",
                       "items": {
@@ -3117,9 +3096,6 @@
                           "documentId": {
                             "type": "string"
                           },
-                          "messageId": {
-                            "type": "string"
-                          },
                           "content": {
                             "type": "string"
                           },
@@ -3129,10 +3105,6 @@
                               "User",
                               "System"
                             ]
-                          },
-                          "messagedAt": {
-                            "type": "string",
-                            "format": "date-time"
                           },
                           "chatSession": {
                             "type": "object",
@@ -3306,10 +3278,6 @@
               }
             }
           },
-          "startedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
           "messages": {
             "type": "array",
             "items": {
@@ -3396,14 +3364,10 @@
         "properties": {
           "data": {
             "required": [
-              "messageId",
               "content"
             ],
             "type": "object",
             "properties": {
-              "messageId": {
-                "type": "string"
-              },
               "content": {
                 "type": "string"
               },
@@ -3413,10 +3377,6 @@
                   "User",
                   "System"
                 ]
-              },
-              "messagedAt": {
-                "type": "string",
-                "format": "date-time"
               },
               "chatSession": {
                 "oneOf": [
@@ -3488,7 +3448,6 @@
       "Message": {
         "type": "object",
         "required": [
-          "messageId",
           "content"
         ],
         "properties": {
@@ -3496,9 +3455,6 @@
             "type": "number"
           },
           "documentId": {
-            "type": "string"
-          },
-          "messageId": {
             "type": "string"
           },
           "content": {
@@ -3511,10 +3467,6 @@
               "System"
             ]
           },
-          "messagedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
           "chatSession": {
             "type": "object",
             "properties": {
@@ -3522,9 +3474,6 @@
                 "type": "number"
               },
               "documentId": {
-                "type": "string"
-              },
-              "sessionId": {
                 "type": "string"
               },
               "title": {
@@ -4044,10 +3993,6 @@
                   }
                 }
               },
-              "startedAt": {
-                "type": "string",
-                "format": "date-time"
-              },
               "messages": {
                 "type": "array",
                 "items": {
@@ -4059,9 +4004,6 @@
                     "documentId": {
                       "type": "string"
                     },
-                    "messageId": {
-                      "type": "string"
-                    },
                     "content": {
                       "type": "string"
                     },
@@ -4071,10 +4013,6 @@
                         "User",
                         "System"
                       ]
-                    },
-                    "messagedAt": {
-                      "type": "string",
-                      "format": "date-time"
                     },
                     "chatSession": {
                       "type": "object",

@@ -9,4 +9,15 @@ export default [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  {
+    name: "strapi::security",
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          "connect-src": ["'self'", "http:", "https:", "ws:", "wss:"],
+        },
+      },
+    },
+  },
 ];

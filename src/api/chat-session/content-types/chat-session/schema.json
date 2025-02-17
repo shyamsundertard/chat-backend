@@ -11,10 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "sessionId": {
-      "type": "uid",
-      "required": true
-    },
     "title": {
       "type": "string",
       "minLength": 2,
@@ -26,10 +22,6 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "chat_sessions"
-    },
-    "startedAt": {
-      "type": "datetime",
-      "required": true
     },
     "messages": {
       "type": "relation",
