@@ -1,61 +1,47 @@
-# 🚀 Getting started with Strapi
+# Real-Time Chat Application Backend
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+This is the backend repository for a real-time chat application built with Strapi that supports WebSocket communication for instant messaging.
 
-### `develop`
+## Features
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+### Socket.IO Integration
+- Real-time bidirectional communication using Socket.IO
+- CORS configuration for secure cross-origin requests
+- Event-based message handling
+- Automatic reconnection management
 
-```
-npm run develop
-# or
-yarn develop
-```
+### User Management
+- Username retrieval functionality
+- User authentication integration with Strapi's users-permissions plugin
+- User verification before chat operations
 
-### `start`
+### Chat Session Management
+- Create new chat sessions with custom titles
+- List all chat sessions for a specific user
+- Sort sessions by most recently updated
+- Automatic session joining upon creation
+- Session selection capability
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+### Message Handling
+- Real-time message exchange between user and system
+- Timestamp tracking for all messages
+- Message history retrieval for each chat session
+- Automatic system response to user messages (echo functionality)
+- Welcome messages for new chat sessions
 
-```
-npm run start
-# or
-yarn start
-```
+### Room-Based Communication
+- Socket room functionality for organizing conversations
+- Join specific chat rooms based on session ID
+- Isolated message broadcasting within rooms
+- Session-specific message delivery
 
-### `build`
+### Error Handling
+- Comprehensive error checking for missing parameters
+- Graceful error handling with detailed logging
+- Socket error event monitoring
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+### Data Persistence
+- Integration with Strapi entity service
+- Storage of user information, chat sessions, and messages
+- Automatic timestamp updates for session activity
+- Sorting and filtering capabilities for data retrieval
