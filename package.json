@@ -4,7 +4,6 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
-    "install": "npm install --omit=dev",
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
@@ -40,7 +39,7 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": "20.18.1",
+    "node": "20.18.3",
     "npm": ">=6.0.0"
   },
   "strapi": {
