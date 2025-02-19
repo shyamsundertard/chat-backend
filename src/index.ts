@@ -84,7 +84,7 @@ module.exports = {
           
           socket.emit("newChatSession", newSession);
           
-          socket.emit("sessionSelected", { sessionId: newSession.id-1 });
+          socket.emit("sessionSelected", (newSession.id-1));
           
           socket.join((newSession.id - 1).toString());
           
